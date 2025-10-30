@@ -1,0 +1,18 @@
+div {
+    background-color: aqua;
+}
+
+.alerta-simple {
+    border: dashed 10px orange;
+    background-color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.alerta-simple p {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
