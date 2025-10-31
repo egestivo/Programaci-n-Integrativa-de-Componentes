@@ -3,8 +3,13 @@ export function fn_saludar(nombres, apellidos) {
 }
 
 
-//puedes exportar funciones e incluso variables y constantes
+//puedes exportar funciones e incluso variables yonstantes
 export const mensajeDespedida = '¿Ya te vas? Esperamos verte de nuevo muy pronto!';
 
-export let nombres = "Estiven Leonel";
-export let apellidos = "Oña Chicaiza";
+export let nombres;
+export let apellidos;
+
+export function nombresApellidos(nuevosNombres, nuevosApellidos) {
+    nombres = nuevosNombres;
+    apellidos = nuevosApellidos;
+}
