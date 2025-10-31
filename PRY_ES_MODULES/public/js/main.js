@@ -4,7 +4,8 @@
 
 import './saludoPorClase.js';
 
-import './despedidaPorClase.js';
+import './despedidaPorClase.js'
+
 
 // console.log(fn_saludar('ESTIVO'));
 
