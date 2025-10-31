@@ -1,48 +1,36 @@
 class BotonOperacion extends HTMLElement {
-    constructor(){
-        super();
-        const shadow = this.attachShadow({mode: 'open'});
-        shadow.innerHTML = `
-        <link rel="stylesheet" href="./public/vendor/bootstrap/css/bootstrap.min.css">  
-        <div class="w-100">
-            <button id="btnCalcular" class="btn btn-light w-100 my-2">CALCULAR</button>
-        </div>
-        `;
-        
-        const disp = shadow.getElementById('txt_numero');
-        const btnCalcular = shadow.getElementById('btnCalcular');
-
-    
-        
-        btnCalcular.addEventListener('click', () => {
-            disp.textContent += btnCalcular.getAttribute('data-value');
-        });
-    }
-
     connectedCallback() {
         const operacion = this.getAttribute('operacion');
-        console.log(operacion);
         
         let textoBoton = 'CALCULAR'; 
+        let signoValue = '';
         
         switch (operacion) {
             case 'suma':
                 textoBoton = '+';
+                signoValue = '+';
                 break;
             case 'resta':
                 textoBoton = '-';
+                signoValue = '-';
                 break;
             case 'multiplicacion':
                 textoBoton = '*';
+                signoValue = '*';
                 break;
             case 'division':
                 textoBoton = '/';
+                signoValue = '/';
                 break;
             default:
                 textoBoton = 'OPERAR';
+                signoValue = '';
                 break;
         }
-        this.shadowRoot.getElementById('btnCalcular').textContent = textoBoton;
+        
+        this.innerHTML = `
+        <button data-value="${signoValue}" class="btn btn-light w-100 my-2">${textoBoton}</button>
+        `;
     }
 }
 
