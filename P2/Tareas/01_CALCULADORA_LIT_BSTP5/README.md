@@ -1,7 +1,5 @@
 # Calculadora (Lit + Bootstrap) - Estiven Oña
 
-=================================
-
 # Descripción breve
 -----------------
 Calculadora funcional con Web Components usando Lit.
