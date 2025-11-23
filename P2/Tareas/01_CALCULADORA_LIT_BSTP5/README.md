@@ -18,7 +18,7 @@ Permite introducir números y operaciones básicas (+ - * /), usar punto decimal
 - Bootstrap 5: usado para estilos — se importa inline dentro de cada shadow root para que las reglas se apliquen correctamente a los componentes.
 - Vite: gestor de desarrollo (usa `npm run dev`).
 
-# Por qué usamos `await` en el wiring de botones
+# ¿Por qué el 'await' en Calculadora.js?
 ---------------------------------------------
 Los componentes de botón son también LitElements con Shadow DOM propio. En el componente padre (`Calculadora`) necesitamos acceder al `shadowRoot` de cada hijo para leer el `button` interno y añadir listeners.
 Si lo hacemos demasiado pronto (por ejemplo en `connectedCallback`) el `shadowRoot` del hijo puede no existir aún y la consulta falla. Por eso en `firstUpdated()` usamos bucles `for..of` y, cuando un hijo expone `updateComplete`, hacemos `await child.updateComplete` antes de acceder a `child.shadowRoot`.
