@@ -1,6 +1,5 @@
-# Calculadora (Lit + Bootstrap)
-=================================
-Estiven Oña
+# Calculadora (Lit + Bootstrap) - Estiven Oña
+
 =================================
 
 # Descripción breve
