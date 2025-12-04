@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI con LIT y Vite</title>
+</head>
+<body style="background-color: rgb(4, 4, 32);">
+    <div style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem; gap: 2rem;">
+        <h2 style="text-align: center; color: white; font-family: monospace; font-size: 3rem;">Usando variables</h2>
+        <user-interface style="--color-fondo: red; --color-texto: white;"></user-interface>
+        <user-interface style="--color-fondo: white; --color-texto: black;"></user-interface>
+        <user-interface style="--color-fondo: purple; --color-texto: cyan;"></user-interface>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem; gap: 2rem;">
+        <h2 style="text-align: center; color: white; font-family: monospace; font-size: 3rem;">Usando properties</h2>
+        <ui-atributos nombre="Botón 1" color="cyan" fondo="purple"></ui-atributos>
+        <ui-atributos nombre="Botón 2" color="blue" fondo="rgb(62, 55, 70)"></ui-atributos>
+        <ui-atributos nombre="Botón 3" color="green" fondo="orange"></ui-atributos>
+    </div>
+
+    <h2 style="text-align: center; color: white; font-family: monospace; font-size: 3rem;">Actividad</h2>
+    <div style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem; gap: 2rem;">
+        <actualizar-color></actualizar-color>
+        <actualizar-color></actualizar-color>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>
